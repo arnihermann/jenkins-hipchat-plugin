@@ -35,6 +35,7 @@ public class StandardHipChatService implements HipChatService {
          PostMethod post = new PostMethod(url);
          try {
             post.addParameter("from", from);
+            post.addParameter("notify", "1");
             post.addParameter("room_id", roomId);
             post.addParameter("message", message);
             post.addParameter("color", color);
